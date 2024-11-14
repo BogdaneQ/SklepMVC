@@ -1,0 +1,30 @@
+﻿/* src/components/Footer/Footer.css */
+.footer {
+    background-color: #f8f9fa;
+    padding: 20px;
+    text-align: center;
+    color: #333;
+    border-top: 1px solid #ddd;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 10px;
+}
+
+    .footer-links a {
+        color: #007bff;
+        text-decoration: none;
+        font-size: 16px;
+    }
+
+        .footer-links a:hover {
+            color: #0056b3;
+        }
+
+.footer-text {
+    font-size: 14px;
+    color: #666;
+}

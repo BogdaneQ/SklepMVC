@@ -1,0 +1,70 @@
+body {
+    background: linear-gradient(45deg, #d3d3d3, #a9a9a9); /* Gradient jako kopia zapasowa */
+    background-image: url('images/pillar.jpg'); /* Œcie¿ka do zdjêcia */
+    background-size: cover; /* Dopasowuje zdjêcie do ekranu */
+    background-position: center center; /* Wyrównanie zdjêcia do œrodka */
+    background-attachment: fixed; /* T³o nie przewija siê */
+    margin: 0; /* Usuwa marginesy */
+    height: 100vh; /* Ustawia wysokoœæ na 100% ekranu */
+    color: white; /* Kolor tekstu na tle */
+}
+
+
+.App {
+    text-align: center;
+    padding-top: 20px; /* Przestrzeñ nad stron¹ g³ówn¹, jeœli nag³ówek ma box-shadow */
+}
+
+.App-logo {
+    height: 40vmin;
+    pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+        animation: App-logo-spin infinite 20s linear;
+    }
+}
+
+.App-header {
+    background-color: transparent; /* T³o nag³ówka jest przezroczyste */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+}
+
+.App-link {
+    color: #61dafb;
+}
+
+/* Kontener nawigacji */
+nav {
+    display: flex; /* Ustawia elementy w jednym wierszu */
+    justify-content: space-between; /* Rozdziela sekcje lew¹ i praw¹ */
+    align-items: center; /* Ustawia elementy w pionie */
+    width: 100%; /* Ustawia pe³n¹ szerokoœæ */
+    padding: 10px 20px; /* Przestrzeñ wewnêtrzna */
+    box-sizing: border-box; /* Uwzglêdnia padding w szerokoœci */
+}
+
+    /* Ustawienie sekcji lewych i prawych */
+    nav .nav-left, nav .nav-right {
+        display: flex; /* Flexbox w sekcjach */
+        gap: 20px; /* Przestrzeñ miêdzy linkami */
+    }
+
+    /* Linki w nawigacji */
+    nav a {
+        text-decoration: none;
+        color: #333;
+        font-size: 16px;
+    }
+
+        /* Efekt hover dla linków */
+        nav a:hover {
+            color: #007bff;
+        }
