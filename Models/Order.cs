@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace SklepMVC.Models
 {
@@ -14,7 +15,8 @@ namespace SklepMVC.Models
 
     public class Order
     {
-        public int Id { get; set; }
+        [Key]
+        public int Id { get; set; } // Klucz główny
 
         [Required]
         public DateTime OrderDate { get; set; } = DateTime.Now;
@@ -22,13 +24,15 @@ namespace SklepMVC.Models
         [Required]
         public OrderStatus Status { get; set; } = OrderStatus.New;
 
+        [ForeignKey(nameof(Customer))]
         [Required]
-        public int CustomerId { get; set; }
-        public Customer Customer { get; set; }
+        public int CustomerId { get; set; } // Klucz obcy do użytkownika
+
+        public Customer Customer { get; set; } // Nawigacja do użytkownika
 
         public List<OrderItem> OrderItems { get; set; } = new List<OrderItem>();
 
-        // Łączna cena netto, brutto oraz VAT można będzie pobrać przez serwis
+        // Łączna cena netto, brutto oraz VAT
         public decimal TotalNetPrice { get; set; }
         public decimal TotalVAT { get; set; }
         public decimal TotalPrice { get; set; }
@@ -36,11 +40,14 @@ namespace SklepMVC.Models
 
     public class OrderItem
     {
-        public int Id { get; set; }
+        [Key]
+        public int Id { get; set; } // Klucz główny
 
+        [ForeignKey(nameof(Product))]
         [Required]
-        public int ProductId { get; set; }
-        public Product Product { get; set; }
+        public int ProductId { get; set; } // Klucz obcy do produktu
+
+        public Product Product { get; set; } // Nawigacja do produktu
 
         [Range(1, int.MaxValue)]
         public int Quantity { get; set; }

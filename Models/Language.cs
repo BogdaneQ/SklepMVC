@@ -1,10 +1,17 @@
-﻿namespace SklepMVC.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace SklepMVC.Models
 {
     public class Language
     {
-        public int Id { get; set; }
-        public string Code { get; set; } // E.g., "en", "pl"
-        public string DisplayName { get; set; }
+        [Key]
+        public int Id { get; set; } // Klucz główny
+
+        [Required]
+        public string Code { get; set; } // Kod języka
+
+        [Required]
+        public string DisplayName { get; set; } // Nazwa wyświetlana
     }
 
 }

@@ -8,6 +8,7 @@ import LoginPage from './Views/Authentication/LoginPage/LoginPage';
 import ForgotPasswordPage from './Views/Authentication/ForgotPasswordPage/ForgotPasswordPage';
 import RegisterPage from './Views/Authentication/RegisterPage/RegisterPage';
 import AdminPanel from './Views/Admin/AdminPanel/AdminPanel';
+import ManageProducts from './Views/Admin/ManageProducts/ManageProducts';
 import Statistics from './Views/Admin/Statistics/Statistics';
 import MyAccount from './Views/Customer/MyAccount/MyAccount';
 import ForHimPage from './Views/Products/CategoryPages/ForHimPage';
@@ -31,6 +32,7 @@ function App() {
                     <Route path="/forgot-password" element={<ForgotPasswordPage />} />
                     <Route path="/register" element={<RegisterPage />} />
                     <Route path="/admin-panel" element={<AdminPanel />} />
+                    <Route path="/manage-products" element={<ManageProducts />} />
                     <Route path="/statistics" element={<Statistics />} />
                     <Route path="/my-account" element={<MyAccount />} />
                     <Route path="/category/for-him" element={<ForHimPage />} />

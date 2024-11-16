@@ -1,12 +1,20 @@
-﻿namespace SklepMVC.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace SklepMVC.Models
 {
     public class Newsletter
     {
-        public int Id { get; set; }
-        public string Subject { get; set; }
-        public string Content { get; set; }
-        public DateTime ScheduledSendDate { get; set; }
-        public bool IsSent { get; set; }
-    }
+        [Key]
+        public int Id { get; set; } // Klucz główny
 
+        [Required]
+        public string Subject { get; set; } // Temat wiadomości
+
+        [Required]
+        public string Content { get; set; } // Treść wiadomości
+
+        public DateTime ScheduledSendDate { get; set; } // Planowana data wysyłki
+
+        public bool IsSent { get; set; } // Status wysłania
+    }
 }

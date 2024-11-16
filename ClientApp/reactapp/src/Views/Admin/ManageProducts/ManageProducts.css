@@ -1,0 +1,130 @@
+﻿.manage-products {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+    .manage-products .product-form {
+        background-color: #f9f9f9;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        max-width: 600px;
+        margin: 0 auto 20px;
+    }
+
+        .manage-products .product-form h2 {
+            margin-bottom: 20px;
+            font-size: 20px;
+            color: #333;
+        }
+
+        .manage-products .product-form label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+            font-size: 14px;
+        }
+
+        .manage-products .product-form input,
+        .manage-products .product-form textarea,
+        .manage-products .product-form select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .manage-products .product-form button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+            .manage-products .product-form button:hover {
+                background-color: #45a049;
+            }
+
+    .manage-products .product-list {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #f9f9f9;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+    }
+
+        .manage-products .product-list h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+            font-size: 22px;
+        }
+
+    .manage-products .product-item {
+        display: flex;
+        flex-direction: column;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        padding: 15px;
+        margin-bottom: 15px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+        .manage-products .product-item h3 {
+            font-size: 18px;
+            color: #4CAF50;
+            margin-bottom: 10px;
+        }
+
+        .manage-products .product-item p {
+            margin: 5px 0;
+            font-size: 14px;
+            color: #555;
+        }
+
+        .manage-products .product-item .price {
+            font-weight: bold;
+            font-size: 16px;
+            color: #333;
+        }
+
+        .manage-products .product-item .actions {
+            margin-top: 10px;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .manage-products .product-item button {
+            padding: 5px 15px;
+            margin-left: 10px;
+            font-size: 14px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+            .manage-products .product-item button.edit {
+                background-color: #4CAF50;
+                color: white;
+            }
+
+                .manage-products .product-item button.edit:hover {
+                    background-color: #45a049;
+                }
+
+            .manage-products .product-item button.remove {
+                background-color: #f44336;
+                color: white;
+            }
+
+                .manage-products .product-item button.remove:hover {
+                    background-color: #d32f2f;
+                }

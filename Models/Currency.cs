@@ -1,11 +1,19 @@
-﻿namespace SklepMVC.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace SklepMVC.Models
 {
     public class Currency
     {
-        public int Id { get; set; }
-        public string Code { get; set; } // E.g., "USD", "EUR", "PLN"
-        public decimal ExchangeRate { get; set; } // Rate compared to default currency
-        public DateTime LastUpdated { get; set; }
+        [Key]
+        public int Id { get; set; } // Klucz główny
+
+        [Required]
+        public string Code { get; set; } // Kod waluty
+
+        [Required]
+        public decimal ExchangeRate { get; set; } // Kurs wymiany
+
+        public DateTime LastUpdated { get; set; } // Data ostatniej aktualizacji
     }
 
 }

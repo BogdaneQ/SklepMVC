@@ -1,20 +1,23 @@
 ﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.DataAnnotations;
 
 namespace SklepMVC.Models
 {
     public class Category
     {
-        public int Id { get; set; }
+        [Key]
+        public int Id { get; set; } // Klucz główny
+
+        [Required]
         public string Name { get; set; }
 
-        // Relacja do nadrzędnej kategorii (null dla kategorii najwyższego poziomu)
-        public int? ParentCategoryId { get; set; }
-        public Category ParentCategory { get; set; }
+        [ForeignKey(nameof(ParentCategory))]
+        public int? ParentCategoryId { get; set; } // Klucz obcy do nadrzędnej kategorii (null dla najwyższego poziomu)
 
-        // Lista podkategorii (tworzy strukturę drzewa)
-        public List<Category> SubCategories { get; set; } = new List<Category>();
+        public Category ParentCategory { get; set; } // Nawigacja do nadrzędnej kategorii
 
-        // Lista produktów przypisanych do tej kategorii
-        public List<Product> Products { get; set; } = new List<Product>();
+        public List<Category> SubCategories { get; set; } = new List<Category>(); // Lista podkategorii
+        public List<Product> Products { get; set; } = new List<Product>(); // Lista produktów w kategorii
     }
 }
