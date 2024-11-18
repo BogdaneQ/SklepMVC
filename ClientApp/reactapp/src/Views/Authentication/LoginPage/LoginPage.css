@@ -73,7 +73,7 @@ button {
 
 .login-image {
     flex: 1;
-    background-image: url('../../../images/bcgP.jpg');
+    background-image: url('C:\Users\mati_\source\repos\BogdaneQ\SklepMVC\ClientApp\reactapp\src\images\bcgP.jpg');
     background-size: cover;
     background-position: center;
 }
